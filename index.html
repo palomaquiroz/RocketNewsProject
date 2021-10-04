@@ -3,59 +3,67 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/reset.css"/>
+        <link rel="stylesheet" href="styles/index.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>
             Rocket News
         </title>
     </head>
     <body>
-        <nav>
+        <nav id="navigationBar">
             <img src="images/logo.png" alt="Rocket News Logo" width="120px"/>
-            <ul>
+            <ul class="menu">
                 <li>
-                    <a href="#">
+                    <a class="menuButton" href="#">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a class="menuButton" href="#">
                         Local
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a class="menuButton" href="#">
                         Politics
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a class="menuButton" href="#">
                         Economics
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a class="menuButton" href="#">
                         Tech
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a class="menuButton" href="#">
                         Sports
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a class="menuButton" href="#">
                         Covid
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a class="menuButton" href="#">
                         International
                     </a>
                 </li>
             </ul>
+            <a class="icon">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
-        <header>
-            <img src="images/logo.png" alt="Rocket News Logo" width="450px">
+        <header id="rocketNewsHeader">
             <div>
+                <img class="rocketLogo" src="images/logo.png" alt="Rocket News Logo" width="450px">
+            </div>
+            <div id="rocketNewsTitle">
                 <h1>
                     Rocket News
                 </h1>
@@ -64,129 +72,157 @@
                 </p>
             </div>
         </header>
-        <aside>
+        <aside id="mostVisited">
             <h2>
                 The most visited
             </h2>
-            <div>
+            <div class="mostVisitedCard">
                 <a href="#">
-                    <img>
+                    <div>
+                        <img class="newsImg mostVisitedImg" src="images/news.png" alt="Star news Cover">
+                    </div>
                     <h6>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     </h6>
                 </a>
             </div>
-            <div>
+            <div class="mostVisitedCard">
                 <a href="#">
-                    <img>
+                    <div>
+                        <img class="newsImg mostVisitedImg" src="images/news.png" alt="Star news Cover">
+                    </div>
                     <h6>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     </h6>
                 </a>
             </div>
-            <div>
+            <div class="mostVisitedCard">
                 <a href="#">
-                    <img>
+                    <div>
+                        <img class="newsImg mostVisitedImg" src="images/news.png" alt="Star news Cover">
+                    </div>
                     <h6>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     </h6>
+                </a>
+            </div>
+            <div class="adCard">
+                <a href="#">
+                    <div">
+                        <img class="adImg" src="images/ad-1.jpg">
+                    </div>
                 </a>
             </div>
         </aside>
-        <main>
+        <main id="mainContent">
             <h2>
                 Latest news
             </h2>
-            <div>
+            <div class="latestCard">
                 <a href="#">
-                    <img>
-                    <h3>
+                    <div>
+                        <img class="newsImg latestImg" src="images/latest-news.png" alt="Meteoritical news Cover">
+                    </div>
+                    <h3 class="latestTitle">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </h3>
-                    <p>
+                    <p class="latestDescription">
                         Aspernatur perferendis qui adipisci modi nobis reiciendis quasi, quibusdam quidem cum natus voluptas aut voluptate? Porro unde, ipsam minus sapiente culpa architecto.
                     </p>
                 </a>
             </div>
-            <div>
+            <div class="latestCard">
                 <a href="#">
-                    <img>
-                    <h3>
+                    <div>
+                        <img class="newsImg latestImg" src="images/latest-news.png" alt="Meteoritical news Cover">
+                    </div>
+                    <h3 class="latestTitle">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     </h3>
-                    <p>
+                    <p class="latestDescription">
                         Quae, tempora consequatur. Nihil maxime totam sapiente, quod ipsum non earum exercitationem distinctio officia repellat recusandae id aliquam explicabo optio ad aperiam.
                     </p>
                 </a>
             </div>
-            <div>
+            <div class="latestCard">
                 <a href="#">
-                    <img>
-                    <h3>
+                    <div>
+                        <img class="newsImg latestImg" src="images/latest-news.png" alt="Meteoritical news Cover">
+                    </div>
+                    <h3 class="latestTitle">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </h3>
-                    <p>
+                    <p class="latestDescription">
                         Minima exercitationem, porro nulla sapiente odio neque itaque assumenda! Amet, distinctio hic? Consequuntur ex enim, beatae praesentium provident tempora obcaecati fuga animi?
                     </p>
                 </a>
             </div>
+            <div class="adCard">
+                <a href="#">
+                    <div>
+                        <img class="adImg" src="images/ad-2.jpg">
+                    </div>
+                </a>
+            </div>
         </main>
-        <footer>
+        <footer id="rocketFooter">
             <h4>
                 Rocket News
             </h4>
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Privacy Policy
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Work with us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Cookies Policy
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Rocket Club
-                        </a>
-                    </li>
-                </ul>
+            <div id="footerLinks">
+                <div class="footerList">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Work with us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Cookies Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Rocket Club
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footerList">
+                    <p>
+                        Follow us on our Social Media
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <p>
-                    Follow us on our Social Media
-                </p>
-                <ul>
-                    <li>
-                        <a href="#">
-                            Facebook
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Instagram
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div>
+            <div id="copyrightText">
                 <p>
                     &copy; Rocket News - October 2021
                 </p>
