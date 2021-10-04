@@ -16,6 +16,6 @@ The layout was designed using the concept of Mobile First. It also uses flexbox 
 
 ## Getting Started
 ### Executing
-You can download the project from this repository and open the 'index.html' file on your browser to see the template or you can access it clicking on its [GithubPage](https://www.w3schools.com/css/css_website_layout.asp)
+You can download the project from this repository and open the 'index.html' file on your browser to see the template or you can access it clicking on its [GithubPage](https://palomaquiroz.github.io/RocketNewsProject/)
 
 And that's it! 😄
