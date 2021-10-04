@@ -26,11 +26,6 @@
 
 .menu {
     display: none;
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 50%;
-    padding: 0rem 5rem; */
 }
 
 .icon {
@@ -42,19 +37,6 @@
 .icon:hover {
     color: var(--orange);
 }
-
-/*
-.menuButton {
-    text-decoration: none;
-    color: rgb(250, 250, 250);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.menuButton:hover {
-    color: var(--orange);
-} */
 
 #rocketNewsHeader {
     display: flex;
@@ -252,4 +234,83 @@
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     color: var(--lightviolet);
+}
+
+@media only screen and (min-width: 768px) {
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    padding: 0rem 5rem;
+}
+
+.icon {
+    display: none;
+}
+
+.menuButton {
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0rem 0.5rem;
+}
+
+.menuButton:hover {
+    color: var(--orange);
+}
+
+#rocketNewsTitle h1 {
+    font-size: 5rem;
+}
+
+#rocketNewsTitle p {
+    font-size: 1.5rem;
+}
+
+#pageBody {
+    display: flex;
+}
+
+#mostVisited {
+    width: 30%;
+    order: 2;
+    justify-content: start;
+}
+
+.mostVisitedCard a {
+    margin: 3rem;
+}
+
+.mostVisitedCard a div {
+    width: 50%;
+}
+
+#mainContent {
+    order: 1;
+    width: 70%;
+    padding: 2rem 5rem;
+}
+
+#mainContent h2 {
+    font-size: 3rem;
+    text-shadow: 0.2rem 0.2rem rgb(250, 250, 250);
+}
+
+.latestCard div {
+    width: 30%;
+}
+
+.latestDescription {
+        width: 60%;
+        font-size: 1rem;
+}
+
+#rocketFooter h4 {
+    font-size: 2.5rem;
+}
+
 }
