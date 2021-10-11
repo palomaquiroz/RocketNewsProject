@@ -1,0 +1,77 @@
+@media only screen and (min-width: 768px) {
+    .menu {
+        display: flex;
+        justify-content: center;
+        font-size: 0.9rem;
+        width: 62%;
+        padding: 0rem 5rem;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .menu-button {
+        text-decoration: none;
+        color: rgb(250, 250, 250);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0rem 0.5rem;
+    }
+
+    .menu-button:hover {
+        color: var(--orange);
+    }
+
+    #rocket-news-title h1 {
+        font-size: 5rem;
+    }
+
+    #rocket-news-title p {
+        font-size: 1.5rem;
+    }
+
+    #page-body {
+        display: flex;
+    }
+
+    #most-visited {
+        width: 30%;
+        order: 2;
+        justify-content: start;
+    }
+
+    .most-visited-card a {
+        margin: 3rem;
+    }
+
+    .most-visited-card a div {
+        width: 50%;
+    }
+
+    #main-content {
+        order: 1;
+        width: 70%;
+        padding: 2rem 5rem;
+    }
+
+    #main-content h2 {
+        font-size: 3rem;
+        text-shadow: 0.2rem 0.2rem rgb(250, 250, 250);
+    }
+
+    .latest-card div {
+        width: 30%;
+    }
+
+    .latest-description {
+        width: 60%;
+        font-size: 1rem;
+    }
+
+    #rocket-footer h4 {
+        font-size: 2.5rem;
+    }
+
+}
