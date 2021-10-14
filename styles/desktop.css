@@ -70,6 +70,16 @@
         font-size: 1rem;
     }
 
+    #subscription-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .form-field {
+        width: 45%;
+    }
+
     #rocket-footer h4 {
         font-size: 2.5rem;
     }
