@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="styles/subscription.css">
+    <link rel="stylesheet" href="styles/desktop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        Subscribe!
+    </title>
+</head>
+<body>
+    <nav id="navigation-bar">
+        <img src="images/logo.png" alt="Rocket News Logo" width="120"/>
+        <ul class="menu">
+            <li>
+                <a class="menu-button" href="#">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="menu-button" href="#">
+                    Local
+                </a>
+            </li>
+            <li>
+                <a class="menu-button" href="#">
+                    Politics
+                </a>
+            </li>
+            <li>
+                <a class="menu-button" href="#">
+                    Economics
+                </a>
+            </li>
+            <li>
+                <a class="menu-button" href="#">
+                    Tech
+                </a>
+            </li>
+            <li>
+                <a class="menu-button" href="#">
+                    Sports
+                </a>
+            </li>
+            <li>
+                <a class="menu-button" href="#">
+                    Covid
+                </a>
+            </li>
+            <li>
+                <a class="menu-button" href="#">
+                    International
+                </a>
+            </li>
+        </ul>
+        <a class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <header id="rocket-news-header">
+        <div>
+            <img class="rocket-logo" src="images/logo.png" alt="Rocket News Logo" width="450">
+        </div>
+        <div id="rocket-news-title">
+            <h1>
+                Rocket News
+            </h1>
+            <p>
+                The latest news from the universe
+            </p>
+        </div>
+    </header>
+    <div id="page-body">
+        <div id="subscription-container">
+            <h2 id="subscription-title">
+                Complete the form below to suscribe
+            </h2>
+            <form id="subscription-form">
+                <div class="form-field">
+                    <label class="form-label" for="full-name">Full name:</label>
+                    <input class="form-input" type="text" id="full-name" name="full-name" placeholder="Tell us your name">
+                    <span id="error-fname" class="error error-hidden">
+                        Your name must have at least 6 characters and a space
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="email">Email:</label>
+                    <input class="form-input" type="text" id="email" name="email" placeholder="Give us your email">
+                    <span id="error-email" class="error error-hidden">
+                        Invalid email
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="password">Password:</label>
+                    <input class="form-input" type="text" id="password" name="password" placeholder="Create your password">
+                    <span id="error-password" class="error error-hidden">
+                        Password must be at least 8 characters long and have letters (a-z) and numbers (0-9)
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="repeat-password">Repeat password:</label>
+                    <input class="form-input" type="text" id="repeat-password" name="repeat-password" placeholder="Repeat your password">
+                    <span id="error-repeat-password" class="error error-hidden">
+                        Passwords don't match
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="age">Age:</label>
+                    <input class="form-input" type="text" id="age" name="age" placeholder="Tell us your age">
+                    <span id="error-age" class="error error-hidden">
+                        You must be 18 or older
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="phone">Phone:</label>
+                    <input class="form-input" type="text" id="phone" name="phone" placeholder="Give us your phone">
+                    <span id="error-phone" class="error error-hidden">
+                        Phone must have at least 7 digits. Please don't use blank spaces, dashes or parentheses
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="address">Address:</label>
+                    <input class="form-input" type="text" id="address" name="address" placeholder="Tell us your address">
+                    <span id="error-address" class="error error-hidden">
+                        Address must have at least 5 characters. You should use letters (a-z), numbers (0-9) and a space.
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="city">City:</label>
+                    <input class="form-input" type="text" id="city" name="city" placeholder="Tell us your city">
+                    <span id="error-city" class="error error-hidden">
+                        City must have at least 3 characters
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="postal-code">Postal code:</label>
+                    <input class="form-input" type="text" id="postal-code" name="postal-code" placeholder="Give us your postal code">
+                    <span id="error-pcode" class="error error-hidden">
+                        Postal code must have at least 3 characters
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="id">ID:</label>
+                    <input class="form-input" type="text" id="id" name="id" placeholder="Give us your ID">
+                    <span id="error-id" class="error error-hidden">
+                        ID should be 7 to 8 characters long
+                    </span>
+                </div>
+            </form>
+            <button id="suscribe-btn" type="submit">Suscribe</button>
+        </div>
+    </div>
+    <footer id="rocket-footer">
+        <h4>
+            Rocket News
+        </h4>
+        <div id="footer-links">
+            <div class="footer-list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Work with us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Cookies Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Rocket Club
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-list">
+                <p>
+                    Follow us on our Social Media
+                </p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="copyright-text">
+            <p>
+                &copy; Rocket News - October 2021
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
