@@ -52,7 +52,7 @@
 }
 
 .error-hidden {
-    display: none;
+    opacity: 0;
 }
 
 #suscribe-btn {
