@@ -5,7 +5,7 @@
     font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
 }
 
-#subscription-title {
+.subscription-title {
     margin: 3rem 0rem;
     text-align: center;
     font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
@@ -62,7 +62,7 @@
     opacity: 0;
 }
 
-#suscribe-btn {
+.suscribe-btn {
     padding: 1rem;
     border: none;
     border-radius: 0.2rem;
@@ -72,7 +72,7 @@
     font-size: 1.5rem;
 }
 
-#suscribe-btn:hover {
+.suscribe-btn:hover {
     background-color: var(--darkviolet);
     color: var(--darkorange);
 }
