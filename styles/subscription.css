@@ -1,3 +1,10 @@
+#welcomeText {
+    opacity: 0;
+    margin: 2rem 0rem;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+}
+
 #subscription-title {
     margin: 3rem 0rem;
     text-align: center;
