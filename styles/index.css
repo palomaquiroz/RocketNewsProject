@@ -184,6 +184,15 @@
     border: none;
 }
 
+#subscription-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.suscribe-index {
+    width: 100%;
+}
+
 #rocket-footer {
     display: flex;
     flex-direction: column;
