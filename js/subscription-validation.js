@@ -259,3 +259,15 @@ submitBtn.onclick = function () {
     }
     location.reload();
 }
+
+// Bonus - Dynamic Text
+var dynamicTitle = document.querySelector('#welcomeText');
+
+fnameInput.onfocus = function () {
+    dynamicTitle.style.opacity = '1';
+}
+
+fnameInput.addEventListener('keyup', function () {
+    var username = fnameInput.value;
+    dynamicTitle.innerHTML = 'Hi' + ' ' + username;
+});
