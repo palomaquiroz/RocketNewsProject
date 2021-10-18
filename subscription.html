@@ -89,74 +89,98 @@
                     <label class="form-label" for="full-name">Full name:</label>
                     <input class="form-input" type="text" id="full-name" name="full-name" placeholder="Tell us your name">
                     <span id="error-fname" class="error error-hidden">
-                        Your name must have more than 6 characters and a space
                     </span>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="email">Email:</label>
                     <input class="form-input" type="text" id="email" name="email" placeholder="Give us your email">
                     <span id="error-email" class="error error-hidden">
-                        Invalid email
                     </span>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="password">Password:</label>
                     <input class="form-input" type="text" id="password" name="password" placeholder="Create your password">
                     <span id="error-password" class="error error-hidden">
-                        Password must be at least 8 characters long and have letters (a-z) and numbers (0-9)
                     </span>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="repeat-password">Repeat password:</label>
                     <input class="form-input" type="text" id="repeat-password" name="repeat-password" placeholder="Repeat your password">
                     <span id="error-repeat-password" class="error error-hidden">
-                        Passwords don't match
                     </span>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="age">Age:</label>
                     <input class="form-input" type="text" id="age" name="age" placeholder="Tell us your age">
                     <span id="error-age" class="error error-hidden">
-                        You must be 18 or older
                     </span>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="phone">Phone:</label>
                     <input class="form-input" type="text" id="phone" name="phone" placeholder="Give us your phone">
                     <span id="error-phone" class="error error-hidden">
-                        Phone must have at least 7 digits. Please don't use blank spaces, dashes or parentheses
                     </span>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="address">Address:</label>
                     <input class="form-input" type="text" id="address" name="address" placeholder="Tell us your address">
                     <span id="error-address" class="error error-hidden">
-                        Address must have at least 5 characters. You should use letters (a-z), numbers (0-9) and a space.
                     </span>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="city">City:</label>
                     <input class="form-input" type="text" id="city" name="city" placeholder="Tell us your city">
                     <span id="error-city" class="error error-hidden">
-                        City must have at least 3 characters
                     </span>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="postal-code">Postal code:</label>
                     <input class="form-input" type="text" id="postal-code" name="postal-code" placeholder="Give us your postal code">
                     <span id="error-pcode" class="error error-hidden">
-                        Postal code must have at least 3 characters
                     </span>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="id">ID:</label>
                     <input class="form-input" type="text" id="id" name="id" placeholder="Give us your ID">
                     <span id="error-id" class="error error-hidden">
-                        ID should be 7 to 8 characters long
                     </span>
                 </div>
             </form>
-            <button class="suscribe-btn" type="submit">Suscribe</button>
+            <button class="suscribe-btn" type="submit">Subscribe</button>
+            <div id="subscription-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">
+                            &times;
+                        </span>
+                        <h2>
+                            Your Subscription Information
+                        </h2>
+                    </div>
+                    <div class="modal-body">
+                        <p id ='empty-fields'>
+                        </p>
+                        <p id="name-info">
+                        </p>
+                        <p id="email-info">
+                        </p>
+                        <p id="pass-info">
+                        </p>
+                        <p id="age-info">
+                        </p>
+                        <p id="phone-info">
+                        </p>
+                        <p id="address-info">
+                        </p>
+                        <p id="city-info">
+                        </p>
+                        <p id="pcode-info">
+                        </p>
+                        <p id="id-info">
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer id="rocket-footer">
@@ -223,5 +247,6 @@
         </div>
     </footer>
     <script src="js/subscription-validation.js"></script>
+    <script src="js/open-close-modal.js"></script>
 </body>
 </html>
