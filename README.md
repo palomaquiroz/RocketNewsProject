@@ -9,7 +9,7 @@ The objective of the 3rd week project was to create a responsive layout for a Ne
 The objective of the 5th week project was to create a new HTML file with the layout of a subscription form, following the aesthetics of the layout designed on the 3rd week.  
 This form also is responsive, and it has validations on every input done with JS functions.
 These validations were:
-* Full name: Should have more than 6 letters andm at least, one space in between
+* Full name: Should have more than 6 letters and at least, one space in between
 * Email: Should have a valid email format
 * Password: At least 8 characters, with letters and numbers
 * Age: An integer greater or equal to 18
