@@ -224,7 +224,7 @@ var validateAddress = function () {
     var address = addressInput.value;
     if (address.length < 5) {
         formErrors.address = 'Your address must have at least 5 characters';
-    } else if (address.idexOf(' ') <= 0 || address.indexOf(' ') == address.length - 1) {
+    } else if (address.indexOf(' ') <= 0 || address.indexOf(' ') == address.length - 1) {
         formErrors.address = 'Please provide your full address';
     } else if (address.search(/[a-z]/) < 0) {
         formErrors.address = 'Please provide your full address';
