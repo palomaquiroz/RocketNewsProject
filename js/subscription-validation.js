@@ -1,4 +1,4 @@
-// Inputs
+// Form
 var inputs = document.getElementsByClassName('form-input');
 var fnameInput = document.getElementById('full-name');
 var emailInput = document.getElementById('email');
@@ -10,6 +10,7 @@ var addressInput = document.getElementById('address');
 var cityInput = document.getElementById('city');
 var pCodeInput = document.getElementById('postal-code');
 var idInput = document.getElementById('id');
+var submitBtn = document.querySelector('.suscribe-btn');
 
 // Error messages
 var fnameError = document.getElementById('error-fname');
@@ -338,7 +339,7 @@ var modalMessage = function () {
         .then(data => {
             var output = '';
             for (var property in data) {
-            output += property + ': ' + data[property]+ '<br>';
+                output += property + ': ' + data[property]+ '<br>';
             }
             responseMessage.innerHTML = 'Your subscription was successful! Here is your data:';
             responseMessage.style.color = 'green';
@@ -352,16 +353,15 @@ var modalMessage = function () {
         })
     } else {
         var output = '';
-            for (var property in formErrors) {
+        for (var property in formErrors) {
             output += property + ': ' + formErrors[property]+ '<br>';
-            }
+        }
         responseMessage.innerHTML = 'You should complete all of your fields';
         responseMessage.style.color = 'red';
         responseDetails.innerHTML = output;
     }
 };
 
-var submitBtn = document.querySelector('.suscribe-btn');
 submitBtn.addEventListener('click', modalMessage);
 
 // Onload localStorage verification
