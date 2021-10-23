@@ -37,7 +37,7 @@ var idInfo = document.getElementById('id-info');
 var emptyFields = document.getElementById('empty-fields');
 
 var formErrors = {
-    fname: '',
+    name: '',
     email: '',
     password: '',
     repeatPassword: '',
@@ -59,15 +59,15 @@ var clearNameErrors = function () {
 var validateFullName = function () {
     var fullName = fnameInput.value;
     if (fullName.length < 6) {
-        formErrors.fname = 'Your name must have more than 6 characters';
+        formErrors.name = 'Your name must have more than 6 characters';
     } else if (fullName.indexOf(' ') <= 0 || fullName.indexOf(' ') == fullName.length -1) {
-        formErrors.fname = 'You must provide your full name';
+        formErrors.name = 'You must provide your full name';
     } else {
-        formErrors.fname = '';
+        formErrors.name = '';
     }
-    if (formErrors.fname) {
+    if (formErrors.name) {
         fnameError.classList.remove('error-hidden');
-        fnameError.innerHTML = formErrors.fname;
+        fnameError.innerHTML = formErrors.name;
     } else {
         clearNameErrors();
     }
@@ -313,32 +313,74 @@ var validateID = function () {
 idInput.addEventListener('blur', validateID);
 idInput.addEventListener('focus', clearIDErrors);
 
-// Submit validations
-var showInfo = function () {
-    nameInfo.innerHTML = !!formErrors.fname ? formErrors.fname : 'Your name is: ' + fnameInput.value;
-    nameInfo.style.color = !!formErrors.fname ? 'red' : 'black';
-    emailInfo.innerHTML = !!formErrors.email ? formErrors.email : 'Your email is: ' + emailInput.value;
-    emailInfo.style.color = !!formErrors.email ? 'red' : 'black';
-    passInfo.innerHTML = !!formErrors.password ? formErrors.password : 'Your password is: ' + passwordInput.value;
-    passInfo.style.color = !!formErrors.password ? 'red' : 'black';
-    ageInfo.innerHTML = !!formErrors.age ? formErrors.age : 'Your age is: ' + ageInput.value;
-    ageInfo.style.color = !!formErrors.age ? 'red' : 'black';
-    phoneInfo.innerHTML = !!formErrors.phone ? formErrors.phone : 'Your phone is: ' + phoneInput.value;
-    phoneInfo.style.color = !!formErrors.phone ? 'red' : 'black';
-    addressInfo.innerHTML = !!formErrors.address ? formErrors.address : 'Your address: ' + addressInput.value;
-    addressInfo.style.color = !!formErrors.address ? 'red' : 'black';
-    cityInfo.innerHTML = !!formErrors.city ? formErrors.city : 'Your city is: ' + cityInput.value;
-    cityInfo.style.color = !!formErrors.city ? 'red' : 'black';
-    pCodeInfo.innerHTML = !!formErrors.postalCode ? formErrors.postalCode : 'Your postal code is: ' + pCodeInput.value;
-    pCodeInfo.style.color = !!formErrors.postalCode ? 'red' : 'black';
-    idInfo.innerHTML = !!formErrors.id ? formErrors.id : 'Your id is: ' + idInput.value;
-    idInfo.style.color = !!formErrors.id ? 'red' : 'black';
-};
+// Submit validations & localStorage of user data
+var userDataStorage = function () {
+    localStorage.setItem('name', fnameInput.value);
+    localStorage.setItem('email', emailInput.value);
+    localStorage.setItem('password', passwordInput.value);
+    localStorage.setItem('repeat password', repeatPasswordInput.value);
+    localStorage.setItem('age', ageInput.value);
+    localStorage.setItem('phone', phoneInput.value);
+    localStorage.setItem('address', addressInput.value);
+    localStorage.setItem('city', cityInput.value);
+    localStorage.setItem('postal code', pCodeInput.value);
+    localStorage.setItem('ID', idInput.value);
+}
+
+var modalMessage = function () {
+    var API_URL = 'http://curso-dev-2021.herokuapp.com/newsletter?';
+    var queryParams = `name=${fnameInput.value}&email=${emailInput.value}&password=${passwordInput.value}&age=${ageInput.value}&phone=${phoneInput.value}&address=${addressInput.value}&city=${cityInput.value}&postalCode=${pCodeInput.value}&id=${idInput.value}`;
+    if(formErrors.name == '' && formErrors.email == '' && formErrors.password == ''
+    && formErrors.age == '' && formErrors.phone == '' && formErrors.address == ''
+    && formErrors.city == '' && formErrors.postalCode == '' && formErrors.id == '') {
+        fetch(`${API_URL}${queryParams}`)
+        .then(response => response.json())
+        .then(data => {
+            var output = '';
+            for (var property in data) {
+            output += property + ': ' + data[property]+ '<br>';
+            }
+            responseMessage.innerHTML = 'Your subscription was successful! Here is your data:';
+            responseMessage.style.color = 'green';
+            responseDetails.innerHTML = output;
+            userDataStorage();
+        })
+        .catch((error) => {
+            responseMessage.innerHTML = 'There was an error in your subscription: '
+            responseMessage.style.color = 'red';
+            responseDetails.innerHTML = error;
+        })
+    } else {
+        var output = '';
+            for (var property in formErrors) {
+            output += property + ': ' + formErrors[property]+ '<br>';
+            }
+        responseMessage.innerHTML = 'You should complete all of your fields';
+        responseMessage.style.color = 'red';
+        responseDetails.innerHTML = output;
+    }
+}
 
 var submitBtn = document.querySelector('.suscribe-btn');
-submitBtn.addEventListener('click', showInfo);
+submitBtn.addEventListener('click', modalMessage);
 
-// Bonus - Dynamic Text
+// Onload localStorage verification
+var checkLocalStorage = function () {
+    fnameInput.value = !!localStorage.getItem('name') ? localStorage.getItem('name') : null;
+    emailInput.value = !!localStorage.getItem('email') ? localStorage.getItem('email') : null;
+    passwordInput.value = !!localStorage.getItem('password') ? localStorage.getItem('password') : null;
+    repeatPasswordInput.value = !!localStorage.getItem('repeat password') ? localStorage.getItem('repeat password') : null;
+    ageInput.value = !!localStorage.getItem('age') ? localStorage.getItem('age') : null;
+    phoneInput.value = !!localStorage.getItem('phone') ? localStorage.getItem('phone') : null;
+    addressInput.value = !!localStorage.getItem('address') ? localStorage.getItem('address') : null;
+    cityInput.value = !!localStorage.getItem('city') ? localStorage.getItem('city') : null;
+    pCodeInput.value = !!localStorage.getItem('postal code') ? localStorage.getItem('postal code') : null;
+    idInput.value = !!localStorage.getItem('ID') ? localStorage.getItem('ID') : null;
+}
+
+window.onload = checkLocalStorage;
+
+//Dynamic Text
 var dynamicTitle = document.querySelector('#welcomeText');
 
 fnameInput.onfocus = function () {
