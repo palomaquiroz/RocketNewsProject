@@ -329,7 +329,7 @@ var userDataStorage = function () {
 };
 
 var modalMessage = function () {
-    var API_URL = 'http://curso-dev-2021.herokuapp.com/newsletter?';
+    var API_URL = 'https://curso-dev-2021.herokuapp.com/newsletter?';
     var queryParams = `name=${fnameInput.value}&email=${emailInput.value}&password=${passwordInput.value}&age=${ageInput.value}&phone=${phoneInput.value}&address=${addressInput.value}&city=${cityInput.value}&postalCode=${pCodeInput.value}&id=${idInput.value}`;
     if(formErrors.name == '' && formErrors.email == '' && formErrors.password == ''
     && formErrors.age == '' && formErrors.phone == '' && formErrors.address == ''
