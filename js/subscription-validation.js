@@ -325,7 +325,7 @@ var userDataStorage = function () {
     localStorage.setItem('city', cityInput.value);
     localStorage.setItem('postal code', pCodeInput.value);
     localStorage.setItem('ID', idInput.value);
-}
+};
 
 var modalMessage = function () {
     var API_URL = 'http://curso-dev-2021.herokuapp.com/newsletter?';
@@ -359,7 +359,7 @@ var modalMessage = function () {
         responseMessage.style.color = 'red';
         responseDetails.innerHTML = output;
     }
-}
+};
 
 var submitBtn = document.querySelector('.suscribe-btn');
 submitBtn.addEventListener('click', modalMessage);
@@ -376,7 +376,7 @@ var checkLocalStorage = function () {
     cityInput.value = !!localStorage.getItem('city') ? localStorage.getItem('city') : null;
     pCodeInput.value = !!localStorage.getItem('postal code') ? localStorage.getItem('postal code') : null;
     idInput.value = !!localStorage.getItem('ID') ? localStorage.getItem('ID') : null;
-}
+};
 
 window.onload = checkLocalStorage;
 
@@ -385,7 +385,7 @@ var dynamicTitle = document.querySelector('#welcomeText');
 
 fnameInput.onfocus = function () {
     dynamicTitle.style.opacity = '1';
-}
+};
 
 fnameInput.addEventListener('keyup', function () {
     var username = fnameInput.value;
