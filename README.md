@@ -1,7 +1,8 @@
-# RR COURSE - 'BECOME A SOFTWARE DEVELOPER' 3RD AND 5TH WEEK PROJECTS
-Welcome to my 3rd and 5th week projects for the 'Become a Software Developer' RR's course.  
-For the 3rd week: You'll find an HTML structure and CSS styles for a News Page Layout.  
-For the 5th week: You'll find an HTML structure, some CSS styles and JS validations for a Subscription form.
+# RR COURSE - 'BECOME A SOFTWARE DEVELOPER' 3RD, 5TH and 6TH WEEK PROJECTS
+Welcome to my 3rd, 5th and 6th week projects for the 'Become a Software Developer' RR's course.  
+* For the 3rd week: You'll find an HTML structure and CSS styles for a News Page Layout.  
+* For the 5th week: You'll find an HTML structure, some CSS styles and JS validations for a Subscription form.  
+* For the 6th week: You'll find JS functions for validating and sending all of the user data to the [provided server](http://curso-dev-2021.herokuapp.com/newsletter) when clicking in the button 'Subscribe'. If the data is correct, a success message is shown in a pop up modal with all of the user's information, also, the information is stored in the local sotrage. If the data is incorrect, an error message is shown in the modal.
 
 ## Description
 The objective of the 3rd week project was to create a responsive layout for a News Webpage, following the [W3School Layout Pattern](https://www.w3schools.com/css/css_website_layout.asp)
@@ -19,6 +20,9 @@ These validations were:
 * Postal code: At least 3 characters
 * ID: Number of 7 or 8 digits
 
+The objective of the 6th week was to create JS functions to validate the user's data when clicking in the button 'Subscribe!' and sending it to a server through an HTTP request.  If the data validation is correct, the modal should show a success message with all of the data provided by the user. Also, the information is stored in the local storage and when the user reloads the page, the user's info is pre-loaded in the form.
+If the data is incorrect, the modal shouls show an error message and nothing is stored in the local storage.  
+
 In this repo, you'll find:
 * An HTML index file with the structure of the layout.
 * An HTML subscription file with the structure of the subscription page.
@@ -28,9 +32,9 @@ In this repo, you'll find:
   * 'subscription.css' that contains all of the styles for the subscription form of 'subscription.html'
   * 'desktop.css' that has all the media queries for the desktop version of both pages.
 * An 'images' folder that contains all of the images used in the page.
-* A JS folder that contains the 'subscription-validation.js' file with all of the validation functions for the form's inputs.
+* A JS folder that contains the 'subscription-validation.js' file with all of the validation functions for the form's inputs and the fetch function for sending data to the server.  
 
-The layout was designed using the concept of Mobile First. It also uses flexbox for responsivity, and it has a media query breakpoint for differentiate the mobile from the desktop version.
+The layout was designed using the concept of Mobile First. It also uses flexbox for responsivity, and it has a media query breakpoint for differentiate the mobile from the desktop version.  
 
 ### Clarifications
 * If you had any ad-blocker extension installed in your browser, you won't be able to see the Ads. You'll need to stop it to see them.
